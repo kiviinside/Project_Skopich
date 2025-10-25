@@ -30,6 +30,10 @@ while type(n) != int:
         print('Что-то не так, введите снова!')
         n = input('Введите целое число N: ')
 
-result = sum(((-1) ** (i - 1)) * (x ** i) / i for i in range(1, n + 1))
+result = 0
+i = 1
+while i <= n:
+    result += ((-1) ** (i - 1)) * (x ** i) / i
+    i += 1
 
-print(f'Приближенное значение ln(1 + {x}) = {result}')
+print('Приближенное значение ln(1 +', x, ') =', result)

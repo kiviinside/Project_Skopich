@@ -18,12 +18,12 @@ zero = 0
 count = 0
 while count < n:
     try:
-        num = float(input('Введите число', count + 1, ':'))
+        num = float(input('Введите число: '))
         if num == 0:
             zero += 1
         count += 1
     except ValueError:
         print('Ошибка!')
 
-print(f'Количество чисел, равных нулю: {zero}')
+print('Количество чисел, равных нулю:', zero)
 

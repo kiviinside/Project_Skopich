@@ -17,9 +17,11 @@ while type(n) != int:
     
 total_sum = 0
 current_factorial = 1
+i = 1  
 
-for i in range(1, n + 1):
+while i <= n:
     current_factorial *= i 
     total_sum += current_factorial
+    i += 1  
 
-print(f'S = 1! + 2! + ... + {n}! = {total_sum}')
+print('S = 1! + 2! + ... + ', n, '! =', total_sum)

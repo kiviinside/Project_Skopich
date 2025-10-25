@@ -19,11 +19,11 @@ total_sum = 0
 count = 0
 while count < n:
     try:
-        num = float(input(f'Введите число {count+1}: '))
+        num = float(input('Введите число: '))
         total_sum += num
         count += 1
     except ValueError:
         print('Введите снова!')
 average = total_sum / n
 
-print(f'Среднее арифметическое {n} чисел: {average}')
+print('Среднее арифметическое', n, 'чисел:', average)
