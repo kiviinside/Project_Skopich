@@ -2,7 +2,7 @@
 Найти и вывести на экран S=1!+2!+3!+4!+…+n! (n>1).
 '''
 
-n = input('Введите целое число N: ')
+n = input('Введите целое число N (N>0): ')
 while type(n) != int:
     try:
         n = int(n)
@@ -17,11 +17,9 @@ while type(n) != int:
     
 total_sum = 0
 current_factorial = 1
-i = 1  
 
-while i <= n:
+for i in range(1, n + 1):
     current_factorial *= i 
     total_sum += current_factorial
-    i += 1  
 
-print('S = 1! + 2! + ... + ', n, '! =', total_sum)
+print(f'S = 1! + 2! + ... + ', n, '! =', total_sum)

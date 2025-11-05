@@ -3,7 +3,7 @@
 '''
 
 n = input('Введите количество чисел N: ')
-while type(n) != int:
+while True:
     try:
         n = int(n)
         if n > 0:
@@ -11,19 +11,19 @@ while type(n) != int:
         else:
             print('Ошибка! Введите положительное число.')
             n = input('Введите количество чисел N: ')
-    except:
-        print('Ошибка!')
+    except ValueError:
+        print('Ошибка! Введите целое число.')
         n = input('Введите количество чисел N: ')
 
 total_sum = 0
 count = 0
 while count < n:
     try:
-        num = float(input('Введите число: '))
+        num = float(input('Введите число : '))
         total_sum += num
         count += 1
     except ValueError:
-        print('Введите снова!')
-average = total_sum / n
+        print('Ошибка! Введите число.')
 
+average = total_sum / n
 print('Среднее арифметическое', n, 'чисел:', average)
