@@ -1,14 +1,25 @@
 '''
 Составить функцию, которая выполнит суммирования числового ряда
 '''
-def sum_list(nums):
+def sum_numbers():
+    while True:
+        try:
+            n = int(input("Сколько чисел вы хотите ввести? "))
+            if n < 0:
+                print("Количество чисел не может быть отрицательным. Попробуйте снова.")
+                continue
+            break
+        except ValueError:
+            print("Пожалуйста, введите целое число.")
     total = 0
-    i = 0
-    while i < len(nums):
-        total += nums[i]
-        i += 1
-    return total
+    count = 0
+    while count < n:
+        try:
+            number = float(input(f"Введите число {count + 1}: "))
+            total += number
+            count += 1
+        except ValueError:
+            print("Это не число. Попробуйте снова.")
+    print(f"Сумма введённых чисел: {total}")
 
-nums = [1, 2, 3, 4]
-result = sum_list(nums)
-print('Cумма ряда от 1 до 4:', result)
+sum_numbers()

@@ -6,13 +6,7 @@
 '''
 import math
 
-import math
-
 def Power1(A, B):
-    """
-    Функция вещественного типа, находящая величину A^B по формуле A^B = exp(B*ln(A))
-    В случае нулевого или отрицательного параметра A функция возвращает 0
-    """
     if A <= 0:
         return 0
     return math.exp(B * math.log(A))
@@ -28,9 +22,9 @@ try:
     result_C = Power1(C, P)
     
     print(f"\nРезультаты:")
-    print(f"A^P = {result_A:.6f}")
-    print(f"B^P = {result_B:.6f}")
-    print(f"C^P = {result_C:.6f}")
+    print(f"A^P = {result_A}")
+    print(f"B^P = {result_B}")
+    print(f"C^P = {result_C}")
     
 except ValueError:
     print("Ошибка! Пожалуйста, вводите только числа.")
