@@ -3,21 +3,21 @@
 содержит все числа от 1 до N, то вывести 0; в противном случае вывести номер
 первого недопустимого элемента.
 '''
+import random
 
-N = int(input("Введите размер списка N: "))
+# N = int(input("Введите размер списка N: "))
 
-lst = []
-print(f"Введите {N} целых чисел:")
-for i in range(N):
-    num = int(input(f"Элемент {i + 1}: "))
-    lst.append(num)
+lst = [1, 2, 3, 4]
+#for i in range(N):
+ #   lst.append(random.randrange(1, 50))
 
-visited = [False] * N  
+visited = [False] * 4 
 
-for idx in range(N):
+print('Список:', lst)
+for idx in range(4):
     num = lst[idx]
 
-    if num < 1 or num > N:
+    if num < 1 or num > 4:
         print(idx + 1)
         break
 
